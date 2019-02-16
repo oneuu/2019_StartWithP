@@ -30,3 +30,25 @@ alias python="/usr/local/bin/python3"
 搞定之后检查了`pip list`发现之前安装的开发必备包`pip，distribute，nose，virtualenv`果然都跑到系统自带的python库里了，晕！
 <br/>
 其中distribute死活安不上，查了才发现不支持3.3以上版本，目前也没用到，逐放弃。
+#### 2、BeautifulSoup+lxml
+解析HTML和XML，真他娘的香啊！<br/>
+4.4.0 .string 不支持输出comment，若混合存在也会输出None
+通过属性的值来查找。<br/>
+不过下面这段select用的`^=, $=, *=`语法不太明白，查了一下还没查到所以然。
+<pre>
+soup.select('a[href="http://example.com/elsie"]')
+soup.select('a[href^="http://example.com/"]')
+soup.select('a[href$="tillie"]')
+soup.select('a[href*=".com/el"]')
+</pre>
+#### 3、PhantomJS
+page.render()一开始无法截图，后来发现是必须要在js的目录下执行phantomjs语句才可以。<br/>
+悲伤的是现在PhantomJS被弃，选择用Chrome--headless替代之，感叹啊参考的教程不过2017年，有些东西已经不适用于现在了，时代终究会抛弃一个又一个凡尘之物。
+#### 4、Selenium
+再一次真香！！！
+<br/>
+试着写几句话就得查一次官方文档，像婴儿学字。。
+#### 5、练习
+1）pniao首页图片<br/>
+2）tvn任意一部剧的所有剧照<br/>
+3）unsplash首页的raw文件，支持下滚页面<br/>
